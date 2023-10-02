@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+        }
+
+        .user-card {
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+
+        .user-card p {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        .user-card a {
+            text-decoration: none;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% for user in users%}
+            <div class="user-card">
+                <p>Name: {{user}}</p>
+                <p>Age: {{user.age}}</p>
+                <p>Salary: {{user.salary}}</p>
+                <p>
+                   <a href="{{user.get_absolut_url}}">
+                       View Profile
+                   </a>
+                </p>
+            </div>
+        {%endfor%}
+    </div>
+</body>
+</html>

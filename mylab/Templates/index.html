@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            background-color: aqua;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: blueviolet;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        nav h1 {
+            color: white;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-link.active {
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .person {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: wheat;
+            height: 350px;
+            width: 700px;
+            padding: 50px;
+            border-radius: 10px;
+        }
+
+        .person_info {
+            text-align: center;
+        }
+
+        .person_info h3 {
+            padding: 20px 30px;
+            font-size: 34px;
+            background-color: red;
+            border-radius: 12px;
+        }
+
+        .info {
+            padding: 20px 80px;
+            border: 2px solid;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav_cont">
+            <h1>Anketa</h1>
+            <a href="http://127.0.0.1:8000">Home</a>
+            <div class="collapse">
+                <ul style="list-style: none;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000">Registration</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="person">
+                <div class="person_info">
+                    <h3>Anketa</h3>
+                    <div class="info">{{users.name}}</div>
+                    <div class="info">{{users.surname}}</div>
+                    <div class="info">{{users.age}}</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

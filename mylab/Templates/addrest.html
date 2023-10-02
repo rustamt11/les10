@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Add Page</title>
+    <style>
+        body {
+            background-color: wheat;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-items ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu-items li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .menu-items a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .input-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .input-group button {
+            display: block;
+            margin: auto;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: #008CBA;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .input-group button:hover {
+            background-color: #005f5f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <header class="header-nav">
+            <div class="menu-items">
+                <ul>
+                    <li>
+                        <a class="active-link" aria-current="page" href="http://localhost:8000/check">View</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+       <form action="" method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="username">
+                    <p style="text-align: center; font-size: 24px">Name:</p>
+                    <input placeholder="Name" type="text" id="username" name="user">
+                </label>
+                <label for="usersurname">
+                    <p style="text-align: center; font-size: 24px">Surname:</p>
+                    <input placeholder="Surname" id="usersurname" name="surname" type="text">
+                </label>
+                <label for="userage">
+                    <p style="text-align: center; font-size: 24px">Age:</p>
+                    <input placeholder="Age" id="userage" type="number" name='age'>
+                </label>
+                <button type="submit">Add</button>
+            </div>
+       </form>
+
+    </div>
+
+</body>
+</html>
